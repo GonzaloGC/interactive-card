@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Interactive card with tailwind</title>
+  </head>
+  <body class="text-sm">
+    <header
+      class="bg-[url('/src/images/bg-main-desktop.png')] h-screen bg-no-repeat"
+    >
+      <section>
+        <section
+          class="w-[541px] h-[527px] absolute top-[187px] left-[164px] flex flex-col place-content-between"
+        >
+          <img
+            class="w-[447px] h-[245px]"
+            src="src/images/bg-card-front.png"
+            alt="bg-card-front"
+          />
+          <img
+            class="self-end w-[447px] h-[245px]"
+            src="src/images/bg-card-back.png"
+            alt="bg-card-back"
+          />
+        </section>
+        <form
+          class="absolute flex flex-col w-[381px] h-[384px] left-[832px] top-[275px] gap-[31px]"
+        >
+          <div class="flex flex-col gap-7">
+            <div class="flex flex-col gap-[9px]">
+              <label class="font-gro" for="text">CARDHOLDER NAME</label>
+              <input
+                class="border border-solid border-gray-400 rounded-lg h-[45px] w-[381px] p-[16px] p-[16px] placeholder:text-lg placeholder:text-gray-300"
+                type="text"
+                placeholder="e.g. Jane Appleseed"
+              />
+            </div>
+            <div class="flex flex-col gap-[9px]">
+              <label class="font-gro" for="text">CARD NUMBER</label>
+              <input
+                class="border border-solid h-[45px] w-[381px] border-gray-400 rounded-lg p-[16px] placeholder:text-lg placeholder:text-gray-300"
+                type="number"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-[43px]">
+            <div class="flex gap-[20px]">
+              <div class="flex flex-col gap-[8px]">
+                <label class="font-gro" for="text">EXP. DATE (MM/YY)</label>
+                <div class="flex gap-[10px]">
+                  <input
+                    class="border border-solid h-[45px] w-[80px] rounded-lg border-gray-400 p-[16px] placeholder:text-lg placeholder:text-gray-300"
+                    type="text"
+                    placeholder="MM"
+                  />
+                  <input
+                    class="border border-solid h-[45px] w-[80px] rounded-lg border-gray-400 p-[16px] placeholder:text-lg placeholder:text-gray-300"
+                    type="number"
+                    placeholder="YY"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-[8px]">
+                <label class="font-gro" for="text">CVC</label>
+                <input
+                  class="border border-solid rounded-lg border-gray-400 h-[45px] w-[191px] p-[16px] placeholder:text-lg placeholder:font-gro placeholder:text-gray-300"
+                  type="number"
+                  placeholder="e.g. 123"
+                />
+              </div>
+            </div>
+            <button
+              class="w-[381px] h-[53px] border rounded-lg border-solid border-black bg-[#21092F] text-white text-lg cursor-pointer font-gro"
+            >
+              Confirm
+            </button>
+          </div>
+        </form>
+      </section>
+    </header>
+  </body>
+</html>
